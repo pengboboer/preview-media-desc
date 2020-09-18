@@ -1,0 +1,5 @@
+<!--pages/index/index.wxml-->
+<view class="main">
+  <button class="btn" catchtap="onClickBtn" data-index="{{0}}">预览图片</button>
+  <button class="btn" catchtap="onClickBtn" data-index="{{1}}">预览图片/视频</button>
+</view>

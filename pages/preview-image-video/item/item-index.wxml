@@ -1,0 +1,35 @@
+<!--pages/preview-image-video/item/item-index.wxml-->
+<view class="box" bindtouchstart='touchStart' bindtouchmove='touchMove' bindtouchend='touchEnd' bindtap="onClickBox" 
+wx:if="{{item.videoUrl == null || item.videoUrl == ''}}">
+  <movable-area scale-area >
+    <movable-view direction="all" animation catchscale="onScale" scale scale-min="0.75" scale-max="5" scale-value="{{scaleItem}}" bindchange="movableChange" out-of-bounds="{{false}}" damping="{{35}}" inertia>
+      <image class="img" src="{{item.picUrl}}" mode="widthFix"></image>
+    </movable-view>
+  </movable-area>
+</view>
+
+
+<view class="box" wx:else>
+  <video 
+    wx:if="{{currentIndex == item.index || currentIndex == -1 || currentIndex == -2}}"
+    class="video"
+    id="myVideo" 
+    src="{{item.videoUrl}}" 
+    binderror="videoErrorCallback" 
+    show-center-play-btn='{{false}}' 
+    show-play-btn="{{true}}" 
+    title="{{info.title}}"
+    direction="0"
+    poster="{{item.picUrl}}"
+    enable-play-gesture
+    enable-progress-gesture="{{false}}"
+    controls
+    autoplay="{{true}}"
+    picture-in-picture-mode="[]"
+    bindenterpictureinpicture='bindVideoEnterPictureInPicture'
+    bindleavepictureinpicture='bindVideoLeavePictureInPicture'
+    objectFit="cover"
+  ></video>
+</view>
+
+<view class="desc" wx:if="{{item.desc != null && item.desc != ''}}">{{item.desc}}</view>

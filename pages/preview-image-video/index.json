@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "swiper-limited-load": "./swiper-limited-load/index",
+    "item-view": "./item/item-index"
+  },
+  "navigationStyle": "custom",
+  "navigationBarTextStyle": "white"
+}
