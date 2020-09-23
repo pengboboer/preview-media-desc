@@ -3,7 +3,7 @@
 
 ### 示例动图
 <img src="/img/test.gif" width = "250" height = "555"/><br><br>
-##### 跟微信小程序的wx.prevImage或者wx.prevVideo的基本类似，体验有些一点点差距，但是好在可以显示图片描述<br>
+##### 跟微信小程序的wx.prevImage或者wx.prevVideo的基本类似，大体功能类似，体验上稍微有一点点差距吧，但是好在可以显示图片描述<br>
 这里实现了如下功能和细节：<br>
 * 支持左右滑动
 * 图片双指缩放
