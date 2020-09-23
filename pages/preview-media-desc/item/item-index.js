@@ -12,20 +12,29 @@ Component({
       let item = that.data.item
       if (index == item.index) {
         if (item.videoUrl != null && item.videoUrl != "") {
-          wx.getImageInfo({
-            src: item.picUrl,
-            success: function(res){
-              console.log(res)
-              let scale = res.height / res.width
-              let videoHeight = wx.getSystemInfoSync().windowWidth * scale
-              that.setData({
-                videoHeight: videoHeight
-              })
-            },
-            fail: function(res){
-              console.log(res)
-            },
+          // 如果项目配置了download域名，则可直接用此代码
+          // 否则看你的接口是否会返回视频的宽高，然后来计算video容器的宽高
+          // wx.getImageInfo({
+          //   src: item.picUrl,
+          //   success: function(res){
+          //     console.log(res)
+          //     let scale = res.height / res.width
+          //     let videoHeight = wx.getSystemInfoSync().windowWidth * scale
+          //     that.setData({
+          //       videoHeight: videoHeight
+          //     })
+          //   },
+          //   fail: function(res){
+          //     console.log(res)
+          //   },
+          // })
+
+
+          // 这里暂时给视频比例弄成个4：3吧， 高：宽 1000： 750
+          that.setData({
+            videoHeight: 1000 / 750 * wx.getSystemInfoSync().windowWidth
           })
+
 
         }
       }
