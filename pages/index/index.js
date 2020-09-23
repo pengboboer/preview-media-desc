@@ -37,7 +37,7 @@ Page({
       }
 
       wx.navigateTo({
-        url: '../../pages/preview-image-video/index',
+        url: '../../pages/preview-media-desc/index',
       })
 
     }
@@ -55,7 +55,8 @@ Page({
             desc: "刘皇叔蹦迪......"
           },
           {
-            picUrl: "https://pic.008box.com/test/20200923150733_2463.jpg", 
+            picUrl: "https://pic.008box.com/test/20200923164811_2537.jpeg",
+            videoUrl: "https://pic.008box.com/test/20200923164808_5195.mp4", 
             desc: "你是我惊鸿一瞥的春光，也是我永恒追逐的星辰大海。"
           },
           {
@@ -72,7 +73,7 @@ Page({
       }
 
       wx.navigateTo({
-        url: '../../pages/preview-image-video/index',
+        url: '../../pages/preview-media-desc/index',
       })
       
     }

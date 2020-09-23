@@ -1,7 +1,7 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/preview-image-video/index"
+    "pages/preview-media-desc/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

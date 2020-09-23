@@ -1,0 +1,25 @@
+<!--components/swiper-limited-load/index.wxml-->
+
+<!-- 这里我没用到别的属性，如果你们用到其它属性的话可以查下文档，直接加进来就行 -->
+
+<swiper 
+  style="height:{{swiperHeight}}px" 
+  duration="{{swiperDuration}}" 
+  current="{{swiperCurrent}}" 
+  bindchange="swiperChange" 
+  circular>
+  <swiper-item wx:key="sss" wx:for="{{swiperList}}" catchtouchmove="{{scaleTempList[item.index] > 1.0 ? 'forbid' : ''}}">
+    <item-view 
+      item="{{item}}"
+      scaleItem="{{scaleList[item.index]}}" 
+      currentIndex="{{currentSelectIndex}}"
+      swiperHeight="{{swiperHeight}}" 
+      bind:touchStart="touchStart"
+      bind:touchMove="touchMove"
+      bind:touchEnd="touchEnd"
+      bind:onClickBox="onClickBox"
+      bind:movableChange="movableChange"
+      bind:onScale="onScale"
+      ></item-view>
+  </swiper-item>
+</swiper>
