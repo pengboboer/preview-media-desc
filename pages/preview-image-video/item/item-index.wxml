@@ -3,7 +3,11 @@
 wx:if="{{item.videoUrl == null || item.videoUrl == ''}}">
   <movable-area scale-area >
     <movable-view direction="all" animation catchscale="onScale" scale scale-min="0.75" scale-max="5" scale-value="{{scaleItem}}" bindchange="movableChange" out-of-bounds="{{false}}" damping="{{35}}" inertia>
-      <image class="img" src="{{item.picUrl}}" mode="widthFix"></image>
+      <scroll-view scroll-y style="height: {{swiperHeight}}px">
+        <view class="img-box" style="min-height: {{swiperHeight}}px">
+          <image class="img" src="{{item.picUrl}}" mode="widthFix"></image>
+        </view>
+      </scroll-view>
     </movable-view>
   </movable-area>
 </view>

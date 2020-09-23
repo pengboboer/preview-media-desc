@@ -10,64 +10,73 @@ Page({
   },
 
   onClickBtn (e) {
-    console.log(e)
     let index = e.currentTarget.dataset.index
+
     if (index == 0) {
+
       app.globalData.previewInfo = {
         list: [
           {
             picUrl: "https://pic.008box.com/picture/20200918104001_2348.jpg", 
-            desc: "哈哈"
+            desc: "这是一个微博长图"
           },
           {
-            picUrl: "https://pic.008box.com/picture/20200902140503_6323.jpg", 
-            desc: "我的"
+            picUrl: "https://pic.008box.com/test/20200923152850_1409.jpg", 
+            desc: "这里是图片描述哦，这里是图片描述哦，这里是图片描述哦，这里是图片描述哦"
           },
           {
-            picUrl: "https://pic.008box.com/test/20200818140820_2175.jpg", 
-            desc: "哇哦到我到我啊到底"
+            picUrl: "https://pic.008box.com/test/20200923152850_5256.jpg", 
+            desc: "这里是图片描述哦，这里是图片描述哦，这里是图片描述哦，这里是图片描述哦"
           },
           {
-            picUrl: "https://pic.008box.com/test/20200818141517_5938.jpg", 
+            picUrl: "https://pic.008box.com/test/20200923152850_1958.jpg", 
             desc: ""
-          }
-        ],
-        current: 1
-      }
-      wx.navigateTo({
-        url: '../../pages/preview-image-video/index',
-      })
-    }
-
-    if (index == 1) {
-      app.globalData.previewInfo = {
-        list: [
-          {
-            picUrl: "https://pic.008box.com/test/20200701092915_1072.jpg", 
-            videoUrl: "https://pic.008box.com/test/20200701092916_0600.mp4",
-            desc: "哈哈"
-          },
-          {
-            picUrl: "https://pic.008box.com/test/20200701092915_1072.jpg", 
-            videoUrl: "https://pic.008box.com/test/20200701092916_0600.mp4",
-            desc: "我的"
-          },
-          {
-            picUrl: "https://pic.008box.com/test/20200818140820_2175.jpg",
-            desc: "哇哦到我到我啊到底"
-          },
-          {
-            picUrl: "https://pic.008box.com/test/20200818141517_5938.jpg", 
-            videoUrl:"https://pic.008box.com/test/20200818141518_5970.mp4", 
-            desc: "这是一个视频"
           }
         ],
         current: 3
       }
+
       wx.navigateTo({
         url: '../../pages/preview-image-video/index',
       })
+
     }
+
+
+
+
+    if (index == 1) {
+
+      app.globalData.previewInfo = {
+        list: [
+          {
+            picUrl: "	https://pic.008box.com/test/20200923152453_9874.jpeg", 
+            videoUrl: "https://pic.008box.com/test/20200923152451_0443.mp4",
+            desc: "刘皇叔蹦迪......"
+          },
+          {
+            picUrl: "https://pic.008box.com/test/20200923150733_2463.jpg", 
+            desc: "你是我惊鸿一瞥的春光，也是我永恒追逐的星辰大海。"
+          },
+          {
+            picUrl: "https://pic.008box.com/test/20200923152850_3681.jpg",
+            desc: "我以为你是那一场春雨，谁知你是大雨之前的电闪雷鸣。"
+          },
+          {
+            picUrl: "https://pic.008box.com/test/20200923150733_4419.jpeg", 
+            videoUrl:"https://pic.008box.com/test/20200923150731_6834.mp4", 
+            desc: "这是一个蜘蛛侠视频"
+          }
+        ],
+        current: 0
+      }
+
+      wx.navigateTo({
+        url: '../../pages/preview-image-video/index',
+      })
+      
+    }
+
   },
 
   /**
