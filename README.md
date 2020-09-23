@@ -1,17 +1,19 @@
 # preview-image-video
-## 微信小程序图片和视频浏览器
+## 微信小程序preview-media带有图片描述
 
 ### 示例动图
-<img src="/img/image_test.gif" width = "250" height = "555"/>   <img src="/img/image_video_test.gif" width = "250" height = "555"/><br><br>
+<img src="/img/test.gif" width = "250" height = "555"/><br><br>
+##### 跟微信小程序的wx.prevImage或者wx.prevVideo的基本类似，体验有些一点点差距，但是好在可以显示图片描述<br>
 这里实现了如下功能和细节：<br>
 * 支持左右滑动
 * 图片双指缩放
-* 单击图片返回、双击放大缩小
+* 单击图片返回
+* 双击放大缩小
 * 图片视频混排
-* 可以显示图片描述
-##### 跟微信小程序的api wx.prevImage的体验有些差距，但是好在可以显示图片描述、图片视频进行混排显示<br>
+* 显示图片描述
+
 # 使用方法<br>
-* 将pages中的preview-image-video复制到您的项目中<br>
+* 将pages中的preview-media-desc复制到您的项目中<br>
 * 在app.json中注册该page<br>
 * 具体可以参照项目目录index中的用法<br>
 
@@ -28,10 +30,13 @@ app.globalData.previewInfo = {
 }
 
 wx.navigateTo({
-  url: '../../pages/preview-image-video/index',
+  url: '../../pages/preview-media-desc/index',
 })
 ```
+# 特别说明：
+* 如果你需要使用视频，那么将会涉及到一个视频的宽高比例问题，这里我使用wx.getImageInfo()来获取视频封面的宽高比，从而知道video容器的高度。使用wx.getImageInfo()来获取网络图片的宽高必须配置download域名，否则最好你的接口能直接返回video的宽高信息，然后通过屏幕宽度计算出video容器的高度，这样显示的视频就会是按比例铺满整个手机的宽度。
+* 在preview-media-desc/item/item-index中可找到对应的代码
 
 
-[csdn原文：微信小程序图片视频混排、可添加图片描述的预览页]()<br>
+[csdn原文：微信小程序可添加图片描述的wx.previewMedia]()<br>
 ### 如果对你有帮助，动动小手给个star,谢谢。
