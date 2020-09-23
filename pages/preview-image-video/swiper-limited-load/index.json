@@ -1,7 +1,0 @@
-{
-  "component": true,
-  "componentGenerics": {
-    "item-view": true
-	},
-  "usingComponents": {}
-}
