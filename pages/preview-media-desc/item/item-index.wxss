@@ -56,5 +56,5 @@ movable-area {
 
 .video{
   width: 100%;
-  height: 1000rpx;
+  height: 0rpx;
 }

@@ -31,6 +31,7 @@ Component({
 
 
           // 这里暂时给视频比例弄成个4：3吧， 高：宽 1000： 750
+          // 你们在使用时要根据情况设置宽高比
           that.setData({
             videoHeight: 1000 / 750 * wx.getSystemInfoSync().windowWidth
           })
