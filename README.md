@@ -38,5 +38,5 @@ wx.navigateTo({
 * 在preview-media-desc/item/item-index中可找到对应的代码
 
 
-[csdn原文：微信小程序可添加图片描述的wx.previewMedia]()<br>
+[csdn原文：微信小程序可添加图片描述的wx.previewMedia](https://blog.csdn.net/pengbo6665631/article/details/108768510)<br>
 ### 如果对你有帮助，动动小手给个star,谢谢。
