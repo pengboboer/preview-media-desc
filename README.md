@@ -39,4 +39,5 @@ wx.navigateTo({
 
 
 [csdn原文：微信小程序可添加图片描述的wx.previewMedia](https://blog.csdn.net/pengbo6665631/article/details/108768510)<br>
+[小程序交流专区：大图预览下添加图片描述](https://developers.weixin.qq.com/community/develop/article/doc/00080c2ed6006805050bd275155c13)<br>
 ### 如果对你有帮助，动动小手给个star,谢谢。
