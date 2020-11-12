@@ -4,9 +4,6 @@ Component({
   observers: {
     'currentIndex': function(index) {
       let that = this
-      console.log("currentIndex", index)
-      console.log("我的index",that.data.item.index)
-
       // 这块代码的目的是为了获取视频的比例，这里是通过视频封面图片来获取的
       // 如果你们后台有直接返回了宽高比例，这里可以直接计算真是的video容器的高度
       let item = that.data.item
@@ -36,11 +33,8 @@ Component({
             videoHeight: 1000 / 750 * wx.getSystemInfoSync().windowWidth
           })
 
-
         }
       }
-
-      
     }
   },
   /**

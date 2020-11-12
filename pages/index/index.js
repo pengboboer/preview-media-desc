@@ -11,73 +11,72 @@ Page({
 
   onClickBtn (e) {
     let index = e.currentTarget.dataset.index
-
     if (index == 0) {
-
-      app.globalData.previewInfo = {
-        list: [
-          {
-            picUrl: "https://pic.008box.com/picture/20200918104001_2348.jpg", 
-            desc: "这是一个微博长图"
-          },
-          {
-            picUrl: "https://pic.008box.com/test/20200923152850_1409.jpg", 
-            desc: "这里是图片描述哦，这里是图片描述哦，这里是图片描述哦，这里是图片描述哦"
-          },
-          {
-            picUrl: "https://pic.008box.com/test/20200923152850_5256.jpg", 
-            desc: "这里是图片描述哦，这里是图片描述哦，这里是图片描述哦，这里是图片描述哦"
-          },
-          {
-            picUrl: "https://pic.008box.com/test/20200923152850_1958.jpg", 
-            desc: ""
-          }
-        ],
-        current: 3
-      }
-
-      wx.navigateTo({
-        url: '../../pages/preview-media-desc/index',
-      })
-
+      this.prevImage()
     }
-
-
-
 
     if (index == 1) {
+      this.prevMedia()
+    }
+  },
 
-      app.globalData.previewInfo = {
-        list: [
-          {
-            picUrl: "	https://pic.008box.com/test/20200923152453_9874.jpeg", 
-            videoUrl: "https://pic.008box.com/test/20200923152451_0443.mp4",
-            desc: "刘皇叔蹦迪......"
-          },
-          {
-            picUrl: "https://pic.008box.com/test/20200923164811_2537.jpeg",
-            videoUrl: "https://pic.008box.com/test/20200923164808_5195.mp4", 
-            desc: "你是我惊鸿一瞥的春光，也是我永恒追逐的星辰大海。"
-          },
-          {
-            picUrl: "https://pic.008box.com/test/20200923152850_3681.jpg",
-            desc: "我以为你是那一场春雨，谁知你是大雨之前的电闪雷鸣。"
-          },
-          {
-            picUrl: "https://pic.008box.com/test/20200923150733_4419.jpeg", 
-            videoUrl:"https://pic.008box.com/test/20200923150731_6834.mp4", 
-            desc: "这是一个蜘蛛侠视频"
-          }
-        ],
-        current: 0
-      }
-
-      wx.navigateTo({
-        url: '../../pages/preview-media-desc/index',
-      })
-      
+  prevImage() {
+    app.globalData.previewInfo = {
+      list: [
+        {
+          picUrl: "https://pic.008box.com/picture/20200918104001_2348.jpg", 
+          desc: "这是一个微博长图"
+        },
+        {
+          picUrl: "https://pic.008box.com/test/20200923152850_1409.jpg", 
+          desc: "这里是图片描述哦，这里是图片描述哦，这里是图片描述哦，这里是图片描述哦"
+        },
+        {
+          picUrl: "https://pic.008box.com/test/20200923152850_5256.jpg", 
+          desc: "这里是图片描述哦，这里是图片描述哦，这里是图片描述哦，这里是图片描述哦"
+        },
+        {
+          picUrl: "https://pic.008box.com/test/20200923152850_1958.jpg", 
+          desc: ""
+        }
+      ],
+      current: 3
     }
 
+    wx.navigateTo({
+      url: '../../pages/preview-media-desc/index',
+    })
+  },
+
+  prevMedia() {
+    app.globalData.previewInfo = {
+      list: [
+        {
+          picUrl: "	https://pic.008box.com/test/20200923152453_9874.jpeg", 
+          videoUrl: "https://pic.008box.com/test/20200923152451_0443.mp4",
+          desc: "刘皇叔蹦迪......"
+        },
+        {
+          picUrl: "https://pic.008box.com/test/20200923164811_2537.jpeg",
+          videoUrl: "https://pic.008box.com/test/20200923164808_5195.mp4", 
+          desc: "你是我惊鸿一瞥的春光，也是我永恒追逐的星辰大海。"
+        },
+        {
+          picUrl: "https://pic.008box.com/test/20200923152850_3681.jpg",
+          desc: "我以为你是那一场春雨，谁知你是大雨之前的电闪雷鸣。"
+        },
+        {
+          picUrl: "https://pic.008box.com/test/20200923150733_4419.jpeg", 
+          videoUrl:"https://pic.008box.com/test/20200923150731_6834.mp4", 
+          desc: "这是一个蜘蛛侠视频"
+        }
+      ],
+      current: 0
+    }
+
+    wx.navigateTo({
+      url: '../../pages/preview-media-desc/index',
+    })
   },
 
   /**

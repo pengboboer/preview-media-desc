@@ -15,9 +15,6 @@
   }
 </wxs>
 
-
-
-
 <view class="index-title" >{{func.getIndex(currentIndex, list)}}/{{list.length}}</view>
 
 <swiper-limited-load

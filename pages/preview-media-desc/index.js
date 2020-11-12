@@ -1,6 +1,5 @@
 // pages/preview-image-video/index.js
 const app = getApp()
-
 Page({
 
   /**
@@ -20,10 +19,8 @@ Page({
   },
 
   swiperChange (e) {
-    let that = this
-    console.log(e.detail)
     let current = e.detail.current
-    that.setData({
+    this.setData({
       currentIndex: current
     })
   },
@@ -70,8 +67,7 @@ Page({
             delta: 1
           })
         }, 350)
-      }
-      
+      } 
     }
     that.data.lastTapTime = curTime
   },
@@ -100,7 +96,6 @@ Page({
   },
 
   onScale (e) {
-    console.log(e)
     let scaleTemp = "scaleTempList[" + this.data.currentIndex + "]"
     this.setData({
       [scaleTemp]: e.detail
